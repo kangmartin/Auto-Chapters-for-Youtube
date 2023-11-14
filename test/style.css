@@ -1,0 +1,38 @@
+div{
+    background-color: rgb(196,48,43);
+    width: 250px;
+    min-height: 200px;
+}
+
+ul{
+    padding: 0;
+}
+
+li{
+    
+    background-color: rgba(196, 158, 156, 0.7);
+    margin: 0;
+    list-style-type: none;
+    border: outset grey 5px;
+    width: 240px;
+    height: 50px;
+   
+    display: flex;
+    justify-content: space-evenly;
+}
+li:hover{
+    
+    cursor: pointer;
+    border: black outset 5px;
+    background-color: rgb(196,48,43,0.9);
+}
+h2{
+    text-align: center;
+    color: white;
+}
+
+#time{
+    color: blue;
+    text-decoration: underline;
+}
+/* rgb(196,48,43) */
