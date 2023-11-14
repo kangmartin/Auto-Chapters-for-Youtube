@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Auto Chapters for YouTube",
+  "description": "A Chrome extension that uses GPT-3/4 to automatically generate chapters for YouTube videos that don't exist",
+  "version": "1.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "images/icon.png"
+  }
+}
