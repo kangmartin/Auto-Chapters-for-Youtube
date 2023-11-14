@@ -1,7 +1,7 @@
 let chapters = {
-    "2023-11-13": "Example 1",
-    "2023-11-14": "Example 2",
-    "2023-11-15": "Example 3",
+    "0:00 ":"Example 1",
+    "0:35": "Example 2",
+    "1:56": "Example 3",
   
 };
 
@@ -19,10 +19,10 @@ function buildChapter(date,exmeple,parent){
     li=document.createElement('li')
     time=document.createElement("p")
     time.id="time"
-    time.textContent=date// la date 
+    time.textContent=date
 
     p=document.createElement("p")
-    p.textContent=exmeple // l'exemple
+    p.textContent=exmeple 
     
     li.appendChild(time)
     li.appendChild(p)
@@ -30,38 +30,29 @@ function buildChapter(date,exmeple,parent){
 
 }
 
+function translatetime(time) {
+    // translate from "12:25" to an int
+
+    // for hour case
+    if (time.length > 5) {
+     
+        let index = time.indexOf(":");
+        let heure = time.substring(0, index);
+
+        time = time.substring(index + 1);
+        index = time.indexOf(":");
+        let minute = time.substring(0, index);
+
+        let seconde = time.substring(index + 1);
+        return heure * 3600 + minute * 60 + seconde * 1;
+    } else {
+        let index = time.indexOf(":");
+        let minute = time.substring(0, index);
+        let seconde = time.substring(index + 1);
+        return minute * 60 + seconde * 1;
+    }
+}
+
+console.log(translatetime("1:01:03"));
 
 build(chapters)
-
-
-
-
-
-// function build(list) {
-//     let ul = document.getElementById('chapterList');
-
-//     
-
-//     // Appeler buildChapter pour chaque entrée dans le dictionnaire
-//     Object.entries(list).forEach(entry => {
-//         let [date, example] = entry;
-//         buildChapter(date, example, ul);
-//     });
-// }
-
-// function buildChapter(date, example, parent) {
-//     let li = document.createElement('li');
-//     let time = document.createElement('p');
-//     time.id = 'time';
-//     time.textContent = date;
-
-//     let p = document.createElement('p');
-//     p.textContent = example;
-
-//     li.appendChild(time);
-//     li.appendChild(p);
-//     parent.appendChild(li);
-// }
-
-// // Appeler la fonction build avec le dictionnaire chapters
-// build(chapters);
