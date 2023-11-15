@@ -2,6 +2,14 @@ let chapters = {
     "0:00 ":"Example 1",
     "0:35": "Example 2",
     "1:56": "Example 3",
+    "2:00 ":"Example 1",
+    "3:35": "Example 2",
+    "4:56": "Example 3",
+    "5:00 ":"Example 1",
+    "8:35": "Example 2",
+    "10:56": "Example 3",
+    "12:00 ":"Example 1",
+    
   
 };
 
@@ -25,7 +33,13 @@ function buildChapter(date,exmeple,parent){
     p.textContent=exmeple 
     
     li.appendChild(time)
+    li.addEventListener('click', function() {
+        add="&t="+translatetime(date)+"s"
+        // path=       +add
+        console.log(add)
+    });
     li.appendChild(p)
+    
     parent.appendChild(li)
 
 }
@@ -35,7 +49,6 @@ function translatetime(time) {
 
     // for hour case
     if (time.length > 5) {
-     
         let index = time.indexOf(":");
         let heure = time.substring(0, index);
 
