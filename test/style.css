@@ -1,17 +1,22 @@
 div{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(196,48,43);
-    width: 250px;
+    width: 270px;
     min-height: 200px;
     border: outset 3px black;
+    max-height: 500px;
+    overflow: hidden;
 }
 
 ul{
     padding: 0;
+    max-height: 400px;
+    overflow: auto;
+    margin-left: 4px;
 }
 
 li{
-    
+
     background-color: rgba(196, 158, 156, 0.7);
     margin: 0;
     list-style-type: none;
