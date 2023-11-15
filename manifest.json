@@ -18,5 +18,11 @@
         "*://*.youtube.com/*"
       ]
     }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["popup.js"],
+      "matches": ["<all_urls>"]
+    }
   ]
 }
