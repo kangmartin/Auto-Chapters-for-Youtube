@@ -1,4 +1,4 @@
-div{
+#subtitles{
     font-family: Georgia, 'Times New Roman', Times, serif;
     background-color: rgb(196,48,43);
     width: 270px;
@@ -8,24 +8,12 @@ div{
     overflow: hidden;
 }
 
-ul{
-    padding: 0;
-    max-height: 400px;
-    overflow: auto;
-    margin-left: 4px;
-}
+
 
 li{
 
     background-color: rgba(196, 158, 156, 0.7);
-    margin: 0;
-    list-style-type: none;
-    border: outset grey 5px;
-    width: 240px;
-    height: 50px;
-   
-    display: flex;
-    justify-content: space-evenly;
+
 }
 li:hover{
     
@@ -33,17 +21,4 @@ li:hover{
     border: black outset 5px;
     background-color: rgb(196,48,43,0.9);
 }
-h2{
-    padding-top: 5px;
-    text-align: center;
-    color: white;
-}
 
-#time{
-    color: blue;
-    text-decoration: underline;
-}
-p{
-    color: white;
-}
-/* rgb(196,48,43) */
